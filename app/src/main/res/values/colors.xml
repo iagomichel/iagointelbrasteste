@@ -1,0 +1,8 @@
+<resources>
+    <color name="ic_launcher_background">#F4F7F3</color>
+    <color name="casa_primary">#126B50</color>
+    <color name="casa_primary_container">#D6EFE2</color>
+    <color name="casa_secondary">#4D6458</color>
+    <color name="casa_background">#F5F7F4</color>
+    <color name="casa_error">#B3261E</color>
+</resources>

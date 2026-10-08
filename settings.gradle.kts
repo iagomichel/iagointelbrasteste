@@ -16,10 +16,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "IagoIntelbras"
 include(":app")
-include(":base")
-include(":common")
 include(":network")
 include(":infrastructure")
 include(":domain")
-include(":test")
 include(":feature:devices")
