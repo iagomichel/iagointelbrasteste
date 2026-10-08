@@ -1,0 +1,31 @@
+<resources>
+    <color name="home_stat_devices">#EAF3EA</color>
+    <color name="home_stat_online">#EFEAF7</color>
+    <color name="device_camera_tile">#ECE7F7</color>
+    <color name="device_lock_tile">#E0F1E8</color>
+    <color name="device_other_tile">#F6ECD9</color>
+    <color name="device_online_text">#26734D</color>
+    <color name="device_online_background">#E3F3E9</color>
+    <color name="device_detail_background">#F7F7F2</color>
+    <color name="device_detail_top_bar">#F8F7F3</color>
+    <color name="device_identity_text">#52635B</color>
+    <color name="device_serial_text">#77827C</color>
+    <color name="device_lock_identity">#193B32</color>
+    <color name="lock_panel_background">#FFFFFF</color>
+    <color name="lock_warning_text">#67594E</color>
+    <color name="lock_title_text">#19171D</color>
+    <color name="lock_accent">#176B52</color>
+    <color name="lock_status_text">#145B47</color>
+    <color name="lock_open_action">#08785D</color>
+    <color name="lock_disabled_action">#B9C9C3</color>
+    <color name="lock_disabled_action_text">#65736D</color>
+    <color name="lock_outline_text">#52635B</color>
+    <color name="lock_outline_border">#D8E0DA</color>
+    <color name="lock_section_title">#193B32</color>
+    <color name="lock_history_title">#102F27</color>
+    <color name="lock_open_status_background">#F8E7DF</color>
+    <color name="lock_closed_status_background">#DDF0E5</color>
+    <color name="lock_unknown_status_background">#E8EEE9</color>
+    <color name="lock_unknown_status_text">#52635B</color>
+    <color name="lock_divider">#E8EEE9</color>
+</resources>
