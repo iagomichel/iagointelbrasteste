@@ -1,12 +1,21 @@
 package com.example.iagointelbras
 
-import android.app.Activity
-import android.os.Bundle
-import android.view.View
+import com.example.iagointelbras.navigation.CasaNavigation
+import com.example.iagointelbras.ui.theme.CasaTheme
 
-class MainActivity : Activity() {
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.WindowCompat
+import androidx.activity.compose.setContent
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(View(this).apply { setBackgroundColor(0xFFFFFFFF.toInt()) })
+        enableEdgeToEdge()
+        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+        setContent { CasaTheme { CasaNavigation() } }
     }
 }
