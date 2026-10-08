@@ -1,10 +1,11 @@
 plugins {
     id("com.android.library")
+    alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "com.example.iagointelbras.network"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 26
@@ -17,5 +18,13 @@ android {
 }
 
 dependencies {
-    implementation(project(":common"))
+    implementation(libs.hilt.android)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.moshi)
+    implementation(libs.moshi)
+    implementation(libs.okhttp)
+    ksp(libs.moshi.codegen)
+    ksp(libs.hilt.compiler)
+    testImplementation(libs.junit)
+    testImplementation(libs.mockwebserver)
 }
