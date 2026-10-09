@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1420" viewBox="0 0 1200 1420" role="img" aria-labelledby="title description">
+  <title id="title">Fluxo MVVM e Clean Architecture do Casa Inteligente</title>
+  <desc id="description">A pessoa interage com a tela Compose. A tela envia eventos ao ViewModel e observa o estado publicado por StateFlow. O ViewModel chama casos de uso da feature, que usam contratos do domínio. A infraestrutura implementa os contratos e acessa a API remota e o armazenamento local.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#176B55"/>
+    </marker>
+    <marker id="arrow-muted" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M1 1 L11 6 L1 11 Z" fill="#69736F"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="12" markerHeight="12" refX="2" refY="6" orient="auto">
+      <path d="M11 1 L1 6 L11 11 Z" fill="#176B55"/>
+    </marker>
+    <style>
+      text { font-family: Inter, "Segoe UI", Arial, sans-serif; fill: #17231F; }
+      .title { font-size: 38px; font-weight: 700; }
+      .subtitle { font-size: 20px; fill: #56635E; }
+      .layer { font-size: 16px; font-weight: 700; letter-spacing: 1.2px; }
+      .node-title { font-size: 25px; font-weight: 700; }
+      .node-subtitle { font-size: 17px; fill: #52605A; }
+      .module { font-size: 15px; font-weight: 600; fill: #52605A; }
+      .arrow-label { font-size: 16px; font-weight: 600; fill: #43514B; }
+      .small { font-size: 15px; fill: #64716B; }
+      .card { stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1420" rx="32" fill="#F8FAF7"/>
+  <text x="600" y="76" text-anchor="middle" class="title">Fluxo MVVM no Casa Inteligente</text>
+  <text x="600" y="112" text-anchor="middle" class="subtitle">Estado e eventos fluem pela apresentação; dados seguem pelos contratos até suas fontes</text>
+
+  <rect x="80" y="156" width="1040" height="364" rx="26" fill="#EAF3F8"/>
+  <rect x="80" y="156" width="12" height="364" rx="6" fill="#59A9D7"/>
+  <text x="120" y="194" class="layer" fill="#286F98">APRESENTAÇÃO · :APP + :FEATURE:DEVICES</text>
+
+  <rect x="80" y="544" width="1040" height="226" rx="26" fill="#EEF6E9"/>
+  <rect x="80" y="544" width="12" height="226" rx="6" fill="#6BAE4A"/>
+  <text x="120" y="582" class="layer" fill="#4B8134">APLICAÇÃO · :FEATURE:DEVICES</text>
+
+  <rect x="80" y="794" width="1040" height="220" rx="26" fill="#F1F4E9"/>
+  <rect x="80" y="794" width="12" height="220" rx="6" fill="#8EAA60"/>
+  <text x="120" y="832" class="layer" fill="#657D3D">DOMÍNIO · :DOMAIN</text>
+
+  <rect x="80" y="1038" width="1040" height="326" rx="26" fill="#FBF0E5"/>
+  <rect x="80" y="1038" width="12" height="326" rx="6" fill="#E99B45"/>
+  <text x="120" y="1076" class="layer" fill="#A86720">DADOS · :INFRASTRUCTURE + :NETWORK</text>
+
+  <circle cx="600" cy="160" r="23" fill="#D4EAF6" stroke="#59A9D7" stroke-width="2"/>
+  <path d="M562 220c4-28 18-42 38-42s34 14 38 42" fill="#D4EAF6" stroke="#59A9D7" stroke-width="3" stroke-linecap="round"/>
+  <text x="600" y="246" text-anchor="middle" class="small">Pessoa usuária</text>
+  <path d="M600 252v27" fill="none" stroke="#176B55" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="624" y="272" class="arrow-label">interação</text>
+
+  <rect x="260" y="292" width="680" height="92" rx="20" fill="#FFFFFF" stroke="#9BC7DD" class="card"/>
+  <text x="600" y="331" text-anchor="middle" class="node-title">View · telas Compose</text>
+  <text x="600" y="360" text-anchor="middle" class="node-subtitle">Renderiza UiState e encaminha eventos por callbacks</text>
+
+  <rect x="260" y="414" width="680" height="86" rx="20" fill="#FFFFFF" stroke="#9BC7DD" class="card"/>
+  <text x="600" y="450" text-anchor="middle" class="node-title">ViewModel</text>
+  <text x="600" y="478" text-anchor="middle" class="node-subtitle">Mantém o estado da tela e coordena operações assíncronas</text>
+
+  <path d="M375 414v-28" fill="none" stroke="#176B55" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="355" y="405" text-anchor="end" class="arrow-label">UiState · StateFlow</text>
+  <path d="M825 384v28" fill="none" stroke="#176B55" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <text x="845" y="405" class="arrow-label">eventos</text>
+
+  <path d="M600 500v43" fill="none" stroke="#69736F" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <text x="625" y="528" class="arrow-label">chama</text>
+  <rect x="260" y="590" width="680" height="86" rx="20" fill="#FFFFFF" stroke="#B4D19F" class="card"/>
+  <text x="600" y="626" text-anchor="middle" class="node-title">Casos de uso</text>
+  <text x="600" y="654" text-anchor="middle" class="node-subtitle">Operações da feature: dispositivos, fechaduras e câmeras</text>
+
+  <path d="M600 676v151" fill="none" stroke="#69736F" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <text x="625" y="746" class="arrow-label">usa contratos</text>
+  <rect x="260" y="842" width="680" height="92" rx="20" fill="#FFFFFF" stroke="#B7C593" class="card"/>
+  <text x="600" y="880" text-anchor="middle" class="node-title">Modelos e contratos de repositório</text>
+  <text x="600" y="910" text-anchor="middle" class="node-subtitle">Abstrações do domínio, sem dependência de Retrofit ou Android</text>
+
+  <path d="M600 934v145" fill="none" stroke="#69736F" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <text x="625" y="1006" class="arrow-label">implementa contratos</text>
+  <rect x="260" y="1092" width="680" height="84" rx="20" fill="#FFFFFF" stroke="#E7BE8E" class="card"/>
+  <text x="600" y="1127" text-anchor="middle" class="node-title">Repositórios · Infrastructure</text>
+  <text x="600" y="1155" text-anchor="middle" class="node-subtitle">Mapeia respostas, trata falhas e persiste configurações locais</text>
+
+  <path d="M600 1176v38h-245v36" fill="none" stroke="#69736F" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <path d="M600 1176v38h245v36" fill="none" stroke="#69736F" stroke-width="3" marker-end="url(#arrow-muted)"/>
+  <rect x="140" y="1252" width="440" height="86" rx="18" fill="#F5DDBF"/>
+  <text x="360" y="1290" text-anchor="middle" class="node-title">Network</text>
+  <text x="360" y="1318" text-anchor="middle" class="node-subtitle">Retrofit / OkHttp → API Casa Inteligente</text>
+  <rect x="620" y="1252" width="440" height="86" rx="18" fill="#F5DDBF"/>
+  <text x="840" y="1290" text-anchor="middle" class="node-title">Armazenamento local</text>
+  <text x="840" y="1318" text-anchor="middle" class="node-subtitle">Android Keystore / preferências privadas</text>
+</svg>
